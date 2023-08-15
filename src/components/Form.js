@@ -1,3 +1,4 @@
+// Form.js
 import React, { useState } from 'react';
 
 const Form = ({ onSubmit, fields }) => {
@@ -13,6 +14,14 @@ const Form = ({ onSubmit, fields }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const formattedValues = Object.entries(formValues)
+      .map(([fieldName, fieldValue]) => `${fieldName}: "${fieldValue}"`)
+      .join('\n');
+
+    const logMessage = `Form submitted with values:\n${formattedValues}`;
+    console.log(logMessage);
+
     onSubmit(formValues);
   };
 
@@ -36,3 +45,4 @@ const Form = ({ onSubmit, fields }) => {
 };
 
 export default Form;
+
