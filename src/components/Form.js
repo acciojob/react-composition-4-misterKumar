@@ -19,7 +19,7 @@ const Form = ({ onSubmit, fields }) => {
       .map(([fieldName, fieldValue]) => `${fieldName}: "${fieldValue}"`)
       .join('\n');
 
-    const logMessage = `Form submitted with values:\n${formattedValues}`;
+    const logMessage = `${formattedValues}\n`;
     console.log(logMessage);
 
     onSubmit(formValues);
