@@ -3,7 +3,7 @@ import React from 'react';
 import Form from './Form'; // Assuming the Form component is in a file named Form.js
 
 const fields = [
-  { name: 'firstName', type: 'text', label: 'Name' },
+  { name: 'name', type: 'text', label: 'Name' },
   { name: 'email', type: 'email', label: 'Email' },
   { name: 'password', type: 'password', label: 'Password' },
   
